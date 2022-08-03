@@ -59,4 +59,110 @@ const SUGGESTED = [
     },
 ];
 
-export { REVIEWS, SUGGESTED };
+const FOOTERLINK = [
+    {
+        id: 1,
+        category: "Products",
+        name: [{
+            id: 11,
+            title: "Bags",
+            path: "bags",
+        },
+        {
+            id: 12,
+            title: "Tees",
+            path: "Tees",
+        },
+        {
+            id: 13,
+            title: "Objects",
+            path: "Objects",
+        },
+        {
+            id: 14,
+            title: "Home Goods",
+            path: "Home Goods",
+        },
+        {
+            id: 15,
+            title: "Accessories",
+            path: "Accessories",
+        },],
+    },
+    {
+        id: 2,
+        category: "Company",
+        name: [{
+            id: 21,
+            title: "Who we are",
+            path: "Who we are",
+        },
+        {
+            id: 22,
+            title: "Sustainability",
+            path: "Sustainability",
+        },
+        {
+            id: 23,
+            title: "Press",
+            path: "Press",
+        },
+        {
+            id: 24,
+            title: "Careers",
+            path: "Careers",
+        },
+        {
+            id: 25,
+            title: "Terms & Condition",
+            path: "Terms & Condition",
+        },
+        {
+            id: 26,
+            title: "Privacy",
+            path: "Privacy",
+        },],
+    },
+    {
+        id: 3,
+        category: "Customer Service",
+        class: "w-[30%]",
+        name: [{
+            id: 31,
+            title: "Contact",
+            path: "Contact",
+        },
+        {
+            id: 32,
+            title: "Shipping",
+            path: "Shipping",
+        },
+        {
+            id: 33,
+            title: "Returns",
+            path: "Returns",
+        },
+        {
+            id: 34,
+            title: "Warranty",
+            path: "Warranty",
+        },
+        {
+            id: 35,
+            title: "Secure Payments",
+            path: "Secure Payments",
+        },
+        {
+            id: 36,
+            title: "FAQ",
+            path: "FAQ",
+        },
+        {
+            id: 37,
+            title: "Find a store",
+            path: "Find a store",
+        },],
+    },
+];
+
+export { REVIEWS, SUGGESTED, FOOTERLINK };

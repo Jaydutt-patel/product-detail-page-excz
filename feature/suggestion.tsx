@@ -31,11 +31,11 @@ const Suggestion = () => {
 
     return (
         <div>
-            <p className="text-2xl">Customers also purchased</p>
+            <p className="text-2xl pt-16">Customers also purchased</p>
             <div className="flex justify-between pb-24">
                 {handleSuggestedData()}
             </div>
-            <hr />
+            <hr className='pb-24' />
         </div >);
 }
 

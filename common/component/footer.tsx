@@ -1,7 +1,44 @@
+import { FOOTERLINK } from "../constants";
+import { Logo } from "../svg";
+
+interface FooterLinks {
+  id: number,
+  category: string,
+  class?: string,
+  name: Array<{
+    id: number,
+    title: string,
+    path: string,
+  }>,
+}
+
 const Footer = () => {
+
+  const footerLinks = () => {
+    return FOOTERLINK.map((footer: FooterLinks) =>
+      <div className={`${footer.class ? footer.class : "w-1/6"}`} key={footer.id}>
+        <ul className="pb-3">
+          <li className="font-bold pb-3">{footer.category}</li>
+          {footer.name.map((link) => <li key={link.id} className="text-gray-400 py-2 hover:text-black">{link.title}</li>)}
+        </ul>
+      </div>)
+  };
+
   return (
     <footer className="pb-8">
-      <p className="text-xl font-bold underline">Copyright 2022</p>
+      <div className="flex">
+        <div className="w-1/12"><Logo color="#5649de" /></div>
+        {footerLinks()}
+        <div className="w-2/5">
+          <p className="font-bold">Sign up for our newsletter</p>
+          <p className="text-gray-400 pt-4 pb-2">The latest deals and savings, sent to your inbox weekly</p>
+          <div className="flex justify-between">
+            <input type="text" className="border w-3/4 rounded-lg" />
+            <button className="bg-indigo-600 w-1/5 text-white py-3 rounded-lg  border border-transparent 
+              hover:bg-transparent hover:text-indigo-600 hover:border-indigo-600">Sign up</button>
+          </div>
+        </div>
+      </div>
     </footer>
   );
 };

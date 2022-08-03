@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import { Bag, Country, Hamburger, Kakashi, Logo, Search } from "../svg";
 
-const Navbar = () => {
+const Header = () => {
   const [open, setOpen] = useState(false);
   return (<>
     <nav className={`flex justify-between pt-8 ${open ? "items-start" : "items-center"}`}>
@@ -45,4 +45,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Header;
