@@ -52,7 +52,7 @@ const Review = () => {
 
     return (
         <div className="main pt-20">
-            <h1 className='pb-8 text-2xl'>Recent reviews</h1>
+            <p className='pb-8 text-2xl'>Recent reviews</p>
             <hr className='pb-8' />
             {handleReviewData()}
         </div>

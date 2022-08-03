@@ -6,7 +6,7 @@ import { Bag, Country, Hamburger, Kakashi, Logo, Search } from "../svg";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (<>
-    <nav className={`flex justify-between ${open ? "items-start" : "items-center"}`}>
+    <nav className={`flex justify-between pt-8 ${open ? "items-start" : "items-center"}`}>
       <div className="w-auto">
         <div className="flex items-center">
           <button className='inline-flex p-3 hover:bg-slate-500 rounded lg:hidden text-gray-500 ml-auto hover:text-white'

@@ -28,4 +28,35 @@ const REVIEWS = [
     },
 ];
 
-export { REVIEWS };
+const SUGGESTED = [
+    {
+        id: 1,
+        img: "https://m.media-amazon.com/images/I/61H7OGtlvpL._UL1500_.jpg",
+        title: "Kakashi T-shirt",
+        color: "White",
+        rate: "$1000",
+    },
+    {
+        id: 2,
+        img: "https://static-cse.canva.com/blob/567610/53aa1e25637131.563487362e1b4.ef896c9d.png",
+        title: "Black Tee",
+        color: "Black",
+        rate: "$50",
+    },
+    {
+        id: 3,
+        img: "https://thesagacity.s3.ap-south-1.amazonaws.com/media/thrasher_x_gojo_web_vptbqnb.webp",
+        title: "Gojo Saturo T-shirt",
+        color: "Black",
+        rate: "$90",
+    },
+    {
+        id: 4,
+        img: "https://outoforder.in/wp-content/uploads/2020/09/alcohol-is-a-solution-womens-t-shirt-image-400x533.jpg",
+        title: "Funny Quotes T-shirt",
+        color: "Black",
+        rate: "$30",
+    },
+];
+
+export { REVIEWS, SUGGESTED };

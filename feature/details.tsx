@@ -4,29 +4,43 @@ import Image from 'next/image';
 import img1 from "../public/nawaz.jpg";
 import img2 from "../public/hritik.jpg";
 import img3 from "../public/tommy.jpg";
-import { Dollar, Globe } from '../common/svg';
+import { Dollar, Globe, Star } from '../common/svg';
 
 function Details() {
     const [selected, setSelected] = useState("0");
     const [size, setSize] = useState("s");
     const sizeActive = "bg-purple-600 bg-indigo-600 text-white font-bold";
+    const handleStar = (stars: number) => {
+        let starReviews = [];
+        for (let i = 0; i < 5; i++) {
+            starReviews.push(
+                <div className='px-1'>
+                    {i <= stars - 1 ? <Star className="fill-yellow-400" /> :
+                        <Star className="fill-transparent stroke-yellow-400 stroke-5" />}
+                </div >);
+        }
+        return starReviews;
+    };
     return (
-        <div className='main'>
-            <div className="details flex justify-between">
+        <div>
+            <div className="flex justify-between">
                 {/* LEFT big IMAGE */}
-                <div className="left w-49 rounded-2xl bg-slate-500">
-                    <div className='h-full w-full relative'>
+                <div className="w-[49%] rounded-2xl bg-slate-500">
+                    <div className='h-full w-full relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
                         <Image alt="img-1" src={img1} className="rounded-xl" layout="fill" objectFit="fill" />
                     </div>
                 </div>
 
-                <div className="right w-49 ">
-                    <div className="intro flex justify-between text-2xl">
+                <div className="w-[49%] ">
+                    <div className="flex justify-between text-2xl">
                         <p>Basic Tee</p> <p>$35</p>
                     </div>
                     {/* REVIEW */}
-                    <div className="rating flex w-1/3 justify-between pt-4">
-                        <span className='flex'><p>3.9</p><p>* * * * *</p></span>
+                    <div className="flex w-2/3 justify-between pt-4">
+                        <div className='flex'>
+                            <p className='pr-2'>3.9</p>
+                            <div className='flex'>{handleStar(4)}</div>
+                        </div>
                         <p className='text-indigo-600 cursor-pointer'>See all 512 reviews</p>
                     </div>
                     {/* COLOR */}
@@ -45,22 +59,22 @@ function Details() {
                             <p>Size</p><p className='text-indigo-600 cursor-pointer'>See sizing chart</p>
                         </div>
                         <div className="flex justify-between">
-                            <div className={`flex items-center w-28 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white
+                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white
                                 ${size === "xxs" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("xxs")}>XXS</div>
 
-                            <div className={`flex items-center w-28 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
+                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
                                 ${size === "xs" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("xs")}>XS</div>
 
-                            <div className={`flex items-center w-28 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
+                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
                                 ${size === "s" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("s")}>S</div>
 
-                            <div className={`flex items-center w-28 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
+                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
                                 ${size === "m" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("m")}>M</div>
 
-                            <div className={`flex items-center w-28 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
+                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
                                 ${size === "l" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("l")}>L</div>
 
-                            <div className={`flex items-center w-28 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
+                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
                                 ${size === "xl" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("xl")}>XL</div>
                         </div>
                     </div>
@@ -90,26 +104,26 @@ function Details() {
                     </div>
                     {/* DELIVERY */}
                     <div className="delivery-info flex">
-                        <div className="bg-gray-100 rounded-lg w-1/4 p-5 flex flex-col items-center justify-center mr-8
+                        <div className="bg-gray-100 rounded-lg w-1/3 p-5 flex flex-col items-center justify-center mr-8
                         cursor-pointer hover:bg-gray-300">
                             <Globe color='#6f6f6f' height='25' />
-                            <p className='text-sm'>International Delivery</p>
+                            <p className='text-sm py-2'>International Delivery</p>
                             <p className='text-sm text-gray-500'>Get your order in 2 years</p>
                         </div>
-                        <div className="bg-gray-100 rounded-lg w-1/4 p-5 flex flex-col items-center justify-center 
+                        <div className="bg-gray-100 rounded-lg w-1/3 p-5 flex flex-col items-center justify-center 
                         cursor-pointer hover:bg-gray-300">
                             <Dollar height='25' />
-                            <p className='text-sm'>Loyalty rewards</p>
+                            <p className='text-sm py-2'>Loyalty rewards</p>
                             <p className='text-sm text-gray-500'>Don&apos;t look at other tees</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="other-images flex justify-between w-49 pt-12">
-                <div className='h-465 w-47 relative'>
+            <div className="other-images flex justify-between w-[49%] pt-12">
+                <div className='h-[465px] w-[47%] relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
                     <Image alt="img-1" src={img2} className="rounded-xl" layout="fill" objectFit="cover" />
                 </div>
-                <div className='h-465 w-47 relative'>
+                <div className='h-[465px] w-[47%] relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
                     <Image alt="img-1" src={img3} className="rounded-xl" layout="fill" objectFit="fill" />
                 </div>
             </div>

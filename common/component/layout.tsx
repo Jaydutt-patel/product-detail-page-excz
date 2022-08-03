@@ -5,7 +5,7 @@ interface LayoutProps {
 }
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="m-6">
+    <div className="w-full max-w-[80%] mx-auto xl:max-w-screen-lg 2xl:max-w-screen-xl">
       < Navbar />
       {children}
       < Footer />

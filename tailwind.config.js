@@ -7,11 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      spacing: {
-        47: "47%",
-        49: "49%",
-        465: "465px",
-      },
       strokeWidth: {
         5: "5px",
       },
