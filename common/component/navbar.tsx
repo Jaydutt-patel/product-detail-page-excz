@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState } from "react";
-import { Bag, Country, Hamburger, Kakashi, Logo, Search } from "../svg/svg";
+
+import { Bag, Country, Hamburger, Kakashi, Logo, Search } from "../svg";
 
 const Navbar = () => {
   const [open, setOpen] = useState(false);
@@ -9,13 +10,11 @@ const Navbar = () => {
       <div className="w-auto">
         <div className="flex items-center">
           <button className='inline-flex p-3 hover:bg-slate-500 rounded lg:hidden text-gray-500 ml-auto hover:text-white'
-            onClick={() => setOpen(!open)}
-          >
+            onClick={() => setOpen(!open)}>
             <Hamburger className="w-6 h-6" />
           </button>
           <div className="lg:hidden"><Search height="30" /></div>
         </div>
-        {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div className={`${open ? '' : 'hidden'} w-full lg:inline-flex lg:flex-grow lg:w-auto`}>
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto w-full lg:items-center items-start flex 
                 flex-col lg:h-auto'>

@@ -12,6 +12,9 @@ module.exports = {
         49: "49%",
         465: "465px",
       },
+      strokeWidth: {
+        5: "5px",
+      },
     },
   },
   plugins: [],

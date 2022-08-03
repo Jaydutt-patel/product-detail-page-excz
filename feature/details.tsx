@@ -4,7 +4,7 @@ import Image from 'next/image';
 import img1 from "../public/nawaz.jpg";
 import img2 from "../public/hritik.jpg";
 import img3 from "../public/tommy.jpg";
-import { Dollar, Globe } from '../common/svg/svg';
+import { Dollar, Globe } from '../common/svg';
 
 function Details() {
     const [selected, setSelected] = useState("0");
