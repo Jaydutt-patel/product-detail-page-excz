@@ -1,8 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./pages/**/*.{js,ts,jsx,tsx}", "./common/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./common/**/*.{js,ts,jsx,tsx}",
+    "./feature/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        47: "47%",
+        49: "49%",
+        465: "465px",
+      },
+    },
   },
   plugins: [],
 };

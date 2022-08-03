@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.outer-border {
+  box-shadow: 0 0 0 2px #ffff inset;
+  box-sizing: border-box;
+}

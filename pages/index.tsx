@@ -1,9 +1,10 @@
-import type { NextPage } from 'next'
+import type { NextPage } from 'next';
+import Details from '../feature/details';
 
 const Home: NextPage = () => {
-  return (<div className='bg-blue-500 '>
-    <h1 className='underline'>Hello World</h1>
-  </div>)
+  return (<div>
+    <Details />
+  </div>);
 }
 
-export default Home
+export default Home;
