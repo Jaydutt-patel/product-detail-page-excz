@@ -42,6 +42,10 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <hr className="mt-10" />
+      <div className="text-gray-500 flex justify-center pt-10 text-xs xsm:text-sm sm:text-lg">
+        &copy;	2022 Workflow, Inc. All rights not reserved.
+      </div>
     </footer>
   );
 };
