@@ -8,14 +8,15 @@ import { Dollar, Globe, Star } from '../common/svg';
 
 function Details() {
     const [selected, setSelected] = useState("0");
-    const [size, setSize] = useState("s");
-    const sizeActive = "bg-purple-600 bg-indigo-600 text-white font-bold";
+    const [size, setSize] = useState("S");
+    const sizeActive = "bg-indigo-600 text-white font-bold";
+
     const handleStar = (stars: number) => {
         let starReviews = [];
-        for (let i = 0; i < 5; i++) {
+        for (let i = 1; i <= 5; i++) {
             starReviews.push(
                 <div className='px-1'>
-                    {i <= stars - 1 ? <Star className="fill-yellow-400" /> :
+                    {i <= stars ? <Star className="fill-yellow-400" /> :
                         <Star className="fill-transparent stroke-yellow-400 stroke-5" />}
                 </div >);
         }

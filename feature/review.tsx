@@ -16,10 +16,10 @@ const Review = () => {
 
     const handleStar = (stars: number) => {
         let starReviews = [];
-        for (let i = 0; i < 5; i++) {
+        for (let i = 1; i <= 5; i++) {
             starReviews.push(
                 <div className='px-1'>
-                    {i <= stars - 1 ? <Star className="fill-yellow-400" /> :
+                    {i <= stars ? <Star className="fill-yellow-400" /> :
                         <Star className="fill-transparent stroke-yellow-400 stroke-5" />}
                 </div >);
         }
@@ -28,7 +28,7 @@ const Review = () => {
 
     const handleReviewData = () => {
         return REVIEWS.map((rev: ReviewData) => (
-            <div className='' key={rev.id}>
+            <div key={rev.id}>
                 <div className='flex justify-between pb-8'>
                     <div className="w-1/3">
                         <div className="name">

@@ -16,7 +16,7 @@ const Suggestion = () => {
         return SUGGESTED.map((sug: SuggestionData) => (
             <div className="pt-10 w-1/5 h-[500px] cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out" key={sug.id}>
                 <div className='h-5/6 w-full relative'>
-                    <Image src={sug.img} alt="suggested-product" className="rounded-xl" layout="fill" objectFit="fill" />
+                    <Image src={sug.img} alt="suggested-product" className="rounded-xl" layout="fill" objectFit="fill" priority />
                 </div>
                 <div className="flex justify-between pt-3">
                     <div>
