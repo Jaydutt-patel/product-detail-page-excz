@@ -12,7 +12,7 @@ interface SuggestionData {
 }
 
 const Suggestion = () => {
-    const handleSuggestedData = () => {
+    const renderSuggestedData = () => {
         return SUGGESTED.map((sug: SuggestionData) => (
             <div className="pt-10 w-1/5 h-[500px] cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out" key={sug.id}>
                 <div className='h-5/6 w-full relative'>
@@ -33,7 +33,7 @@ const Suggestion = () => {
         <div>
             <p className="text-2xl pt-16">Customers also purchased</p>
             <div className="flex justify-between pb-24">
-                {handleSuggestedData()}
+                {renderSuggestedData()}
             </div>
             <hr className='pb-24' />
         </div >);

@@ -5,13 +5,21 @@ import img1 from "../public/nawaz.jpg";
 import img2 from "../public/hritik.jpg";
 import img3 from "../public/tommy.jpg";
 import { Dollar, Globe, Star } from '../common/svg';
+import { ALLSIZES } from '../common/constants';
 
-function Details() {
+const Details = () => {
     const [selected, setSelected] = useState("0");
     const [size, setSize] = useState("S");
     const sizeActive = "bg-indigo-600 text-white font-bold";
 
-    const handleStar = (stars: number) => {
+    const renderSizes = () => {
+        return ALLSIZES.map((siz: any) => (
+            <div key={siz.id} className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white
+                ${size === siz.size ? sizeActive : "border-gray-300"}`} onClick={() => setSize(siz.size)}>{siz.size}</div>
+        ));
+    };
+
+    const renderStar = (stars: number) => {
         let starReviews = [];
         for (let i = 1; i <= 5; i++) {
             starReviews.push(
@@ -40,7 +48,7 @@ function Details() {
                     <div className="flex w-2/3 justify-between pt-4">
                         <div className='flex'>
                             <p className='pr-2'>3.9</p>
-                            <div className='flex'>{handleStar(4)}</div>
+                            <div className='flex'>{renderStar(4)}</div>
                         </div>
                         <p className='text-indigo-600 cursor-pointer'>See all 512 reviews</p>
                     </div>
@@ -60,23 +68,7 @@ function Details() {
                             <p>Size</p><p className='text-indigo-600 cursor-pointer'>See sizing chart</p>
                         </div>
                         <div className="flex justify-between">
-                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white
-                                ${size === "xxs" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("xxs")}>XXS</div>
-
-                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
-                                ${size === "xs" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("xs")}>XS</div>
-
-                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
-                                ${size === "s" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("s")}>S</div>
-
-                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
-                                ${size === "m" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("m")}>M</div>
-
-                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
-                                ${size === "l" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("l")}>L</div>
-
-                            <div className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white 
-                                ${size === "xl" ? sizeActive : "border-gray-300"}`} onClick={() => setSize("xl")}>XL</div>
+                            {renderSizes()}
                         </div>
                     </div>
                     {/* ADD TO CART BTN */}

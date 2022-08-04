@@ -165,4 +165,29 @@ const FOOTERLINK = [
     },
 ];
 
-export { REVIEWS, SUGGESTED, FOOTERLINK };
+const ALLSIZES = [{
+    id: 1,
+    size: "XXS",
+},
+{
+    id: 2,
+    size: "XS",
+},
+{
+    id: 3,
+    size: "S",
+},
+{
+    id: 4,
+    size: "M",
+},
+{
+    id: 5,
+    size: "L",
+},
+{
+    id: 6,
+    size: "XL",
+},]
+
+export { REVIEWS, SUGGESTED, FOOTERLINK, ALLSIZES };

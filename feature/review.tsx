@@ -14,7 +14,7 @@ interface ReviewData {
 
 const Review = () => {
 
-    const handleStar = (stars: number) => {
+    const renderStar = (stars: number) => {
         let starReviews = [];
         for (let i = 1; i <= 5; i++) {
             starReviews.push(
@@ -26,7 +26,7 @@ const Review = () => {
         return starReviews;
     };
 
-    const handleReviewData = () => {
+    const renderReviewData = () => {
         return REVIEWS.map((rev: ReviewData) => (
             <div key={rev.id}>
                 <div className='flex justify-between pb-8'>
@@ -37,7 +37,7 @@ const Review = () => {
                         </div>
                     </div>
                     <div className="rating w-1/3 flex">
-                        {handleStar(rev.star)} <p className='pl-3 font-extralight text-sm'>{rev.star}</p>
+                        {renderStar(rev.star)} <p className='pl-3 font-extralight text-sm'>{rev.star}</p>
                     </div>
                     <div className="rew-desc w-1/3">
                         <p className="text-black">{rev.r_title}</p>
@@ -54,7 +54,7 @@ const Review = () => {
         <div className="main pt-20">
             <p className='pb-8 text-2xl'>Recent reviews</p>
             <hr className='pb-8' />
-            {handleReviewData()}
+            {renderReviewData()}
         </div>
     );
 }
