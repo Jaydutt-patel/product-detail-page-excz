@@ -15,6 +15,7 @@ module.exports = {
       "2xl": "1536px",
     },
     minWidth: {
+      0: "0px",
       200: "200px",
       300: "300px",
       400: "400px",

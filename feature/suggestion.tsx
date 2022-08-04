@@ -15,7 +15,7 @@ const Suggestion = () => {
     const renderSuggestedData = () => {
         return SUGGESTED.map((sug: SuggestionData) => (
             <div className="pt-10 w-1/5 h-[500px] min-w-300 cursor-pointer hover:scale-105 hover:transition-all 
-            duration-500 ease-in-out" key={sug.id}>
+                    duration-500 ease-in-out" key={sug.id}>
                 <div className='h-5/6 w-full relative'>
                     <Image src={sug.img} alt="suggested-product" className="rounded-xl" layout="fill"
                         objectFit="fill" priority />

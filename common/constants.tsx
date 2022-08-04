@@ -83,7 +83,7 @@ const FOOTERLINK = [
     {
         id: 3,
         category: "Customer Service",
-        class: "w-[30%]",
+        class: "w-2/5 lg:w-1/6",
         name: [{
             id: 31,
             title: "Contact",
