@@ -32,16 +32,16 @@ const Details = () => {
     };
     return (
         <div>
-            <div className="flex justify-between">
+            <div className="flex justify-center flex-wrap lg:justify-between">
                 {/* LEFT big IMAGE */}
-                <div className="w-[49%] rounded-2xl bg-slate-500">
+                <div className="rounded-2xl bg-slate-500 min-w-300 min-h-500 sm:min-w-400 lg:w-[49%]">
                     <div className='h-full w-full relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
                         <Image alt="img-1" src={img1} className="rounded-xl" layout="fill" objectFit="fill" />
                     </div>
                 </div>
 
-                <div className="w-[49%] ">
-                    <div className="flex justify-between text-2xl">
+                <div className="min-w-300 sm:min-w-400 lg:w-[49%]">
+                    <div className="flex justify-between text-2xl pt-3 lg:pt-0">
                         <p>Basic Tee</p> <p>$35</p>
                     </div>
                     {/* REVIEW */}
@@ -96,15 +96,15 @@ const Details = () => {
                         </ul>
                     </div>
                     {/* DELIVERY */}
-                    <div className="delivery-info flex">
-                        <div className="bg-gray-100 rounded-lg w-1/3 p-5 flex flex-col items-center justify-center mr-8
-                        cursor-pointer hover:bg-gray-300">
+                    <div className="w-full flex flex-wrap justify-center lg:justify-between xl:w-5/6 2xl:w-3/4">
+                        <div className="w-full p-5 min-w-300 flex flex-col items-center justify-center lg:w-1/3 lg:min-w-200
+                        bg-gray-100 hover:bg-gray-300 rounded-lg cursor-pointer">
                             <Globe color='#6f6f6f' height='25' />
                             <p className='text-sm py-2'>International Delivery</p>
                             <p className='text-sm text-gray-500'>Get your order in 2 years</p>
                         </div>
-                        <div className="bg-gray-100 rounded-lg w-1/3 p-5 flex flex-col items-center justify-center 
-                        cursor-pointer hover:bg-gray-300">
+                        <div className="w-full p-5 min-w-300 mt-5 flex flex-col items-center justify-center lg:w-1/3 lg:min-w-200 lg:mt-0
+                        bg-gray-100 hover:bg-gray-300 rounded-lg cursor-pointer">
                             <Dollar height='25' />
                             <p className='text-sm py-2'>Loyalty rewards</p>
                             <p className='text-sm text-gray-500'>Don&apos;t look at other tees</p>
@@ -112,11 +112,11 @@ const Details = () => {
                     </div>
                 </div>
             </div>
-            <div className="other-images flex justify-between w-[49%] pt-12">
-                <div className='h-[465px] w-[47%] relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
+            <div className="flex flex-wrap justify-center pt-12 w-full lg:w-[49%] sm:justify-between">
+                <div className='h-[465px] w-[47%] min-w-300 sm:min-w-200 relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
                     <Image alt="img-1" src={img2} className="rounded-xl" layout="fill" objectFit="cover" />
                 </div>
-                <div className='h-[465px] w-[47%] relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
+                <div className='h-[465px] w-[47%] min-w-300 sm:min-w-200 relative cursor-pointer mt-5 sm:mt-0 hover:scale-105 hover:transition-all duration-500 ease-in-out'>
                     <Image alt="img-1" src={img3} className="rounded-xl" layout="fill" objectFit="fill" />
                 </div>
             </div>
