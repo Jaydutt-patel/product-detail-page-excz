@@ -18,7 +18,7 @@ const Review = () => {
         let starReviews = [];
         for (let i = 1; i <= 5; i++) {
             starReviews.push(
-                <div className='px-1'>
+                <div className='px-[1px]'>
                     {i <= stars ? <Star className="fill-yellow-400" /> :
                         <Star className="fill-transparent stroke-yellow-400 stroke-5" />}
                 </div >);
@@ -29,17 +29,17 @@ const Review = () => {
     const renderReviewData = () => {
         return REVIEWS.map((rev: ReviewData) => (
             <div key={rev.id}>
-                <div className='flex justify-between pb-8'>
-                    <div className="w-1/3">
+                <div className='flex justify-between pb-8 flex-wrap'>
+                    <div className="w-1/2 lg:w-1/3">
                         <div className="name">
                             <p className="text-black">{rev.name}</p>
                             <p className="text-gray-400">{rev.date}</p>
                         </div>
                     </div>
-                    <div className="rating w-1/3 flex">
+                    <div className="rating w-1/2 lg:w-1/3 flex">
                         {renderStar(rev.star)} <p className='pl-3 font-extralight text-sm'>{rev.star}</p>
                     </div>
-                    <div className="rew-desc w-1/3">
+                    <div className="rew-desc lg:w-1/3 pt-3 lg:p-0">
                         <p className="text-black">{rev.r_title}</p>
                         <p className="text-gray-400 py-4">{rev.r_para1}</p>
                         <p className="text-gray-400">{rev.r_para2}</p>
