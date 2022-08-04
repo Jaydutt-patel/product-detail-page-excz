@@ -1,19 +1,19 @@
 const HEADERLINKS = [{
     id: 1,
     title: "Men",
-    path: "",
+    path: "/men",
 }, {
     id: 2,
     title: "Women",
-    path: "",
+    path: "/women",
 }, {
     id: 3,
     title: "Company",
-    path: "",
+    path: "/company",
 }, {
     id: 4,
     title: "Store",
-    path: "",
+    path: "/store",
 },];
 
 const FOOTERLINK = [
