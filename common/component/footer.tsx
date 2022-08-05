@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { FOOTERLINK } from "../constants";
+
 import { Logo } from "../svg";
+import { FOOTERLINK } from "../constants";
 
 interface FooterLinks {
   id: number,

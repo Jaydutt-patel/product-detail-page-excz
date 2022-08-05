@@ -1,5 +1,5 @@
-import { useState } from 'react';
 import Image from 'next/image';
+import { useState } from 'react';
 
 // import img1 from "../public/nawaz.jpg";
 // import img2 from "../public/hritik.jpg";
@@ -64,7 +64,7 @@ const Details = (props: any) => {
                         <p className='text-indigo-600 cursor-pointer'>See all {reviewCount} reviews</p>
                     </div>
                     {/* COLOR */}
-                    <div className="color py-8 bg-blue-100">
+                    <div className="color py-8">
                         <p>Color</p>
                         <div className="flex justify-between w-1/3">
                             {renderColors()}

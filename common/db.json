@@ -1,7 +1,7 @@
 {
   "products": [
     {
-      "id": 1234,
+      "id": 1,
       "title": "Men Blue Pure Cotton T-shirt",
       "slug": "arrow-men-blue-pure-cotton-t-shirt",
       "brandName": "Arrow",
@@ -85,6 +85,245 @@
           "title": "Funny Quotes T-shirt",
           "color": "Black",
           "rate": "$30"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Men Black Pure Cotton T-shirt",
+      "slug": "hrx-men-black-pure-cotton-t-shirt",
+      "brandName": "HRX",
+      "price": 25,
+      "rating": 4.5,
+      "reviewCount": 610,
+      "availableColors": ["black", "gray"],
+      "availableSize": [
+        {
+          "type": "xxs",
+          "unit": 5
+        },
+        {
+          "type": "xs",
+          "unit": 4
+        },
+        {
+          "type": "s",
+          "unit": 1
+        },
+        {
+          "type": "m",
+          "unit": 2
+        },
+        {
+          "type": "l",
+          "unit": 3
+        },
+        {
+          "type": "xl",
+          "unit": 0
+        }
+      ],
+      "images": [
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13695032/2021/3/23/4542dd44-bd3f-45bb-a87f-dafd36f293311616495794279-HRX-by-Hrithik-Roshan-Men-Tshirts-411616495793135-5.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13695032/2021/3/23/86e99561-0721-4760-b089-49d46f99a0c21616495794331-HRX-by-Hrithik-Roshan-Men-Tshirts-411616495793135-3.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/13695032/2021/3/23/47ce64f1-2f2f-4319-919b-86da51909cb61616495794305-HRX-by-Hrithik-Roshan-Men-Tshirts-411616495793135-4.jpg"
+      ],
+      "description": "<div class=\"meta-container\"><div class=\"meta-info\"><div class=\"meta-desc\">100% Original Products</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Pay on delivery might be available</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Easy 30 days returns and exchanges</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Try &amp; Buy might be available</div></div></div>",
+      "reviews": [
+        {
+          "id": "r1",
+          "author": "Gagobhai Dhanteras",
+          "date": "Jan 16, 2021",
+          "rating": 5,
+          "comment": "Can't say enough good things about this T-shirt"
+        },
+        {
+          "id": "r2",
+          "author": "Champak Lal",
+          "date": "Aug 30, 2022",
+          "rating": 4,
+          "comment": "Bhai ne bola lenaka to le leneka!"
+        }
+      ],
+      "relatedProduct": [
+        {
+          "id": "1",
+          "img": "https://m.media-amazon.com/images/I/61H7OGtlvpL._UL1500_.jpg",
+          "title": "Kakashi T-shirt",
+          "color": "White",
+          "rate": "$1000"
+        },
+        {
+          "id": "3",
+          "img": "https://thesagacity.s3.ap-south-1.amazonaws.com/media/thrasher_x_gojo_web_vptbqnb.webp",
+          "title": "Gojo Saturo T-shirt",
+          "color": "Black",
+          "rate": "$90"
+        },
+        {
+          "id": "4",
+          "img": "https://outoforder.in/wp-content/uploads/2020/09/alcohol-is-a-solution-womens-t-shirt-image-400x533.jpg",
+          "title": "Funny Quotes T-shirt",
+          "color": "Black",
+          "rate": "$30"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Women Pink Pure Cotton T-shirt",
+      "slug": "roadster-women-pink-pure-cotton-t-shirt",
+      "brandName": "Roadster",
+      "price": 45,
+      "rating": 3.5,
+      "reviewCount": 301,
+      "availableColors": ["pink", "black", "indigo"],
+      "availableSize": [
+        {
+          "type": "xxs",
+          "unit": 5
+        },
+        {
+          "type": "xs",
+          "unit": 4
+        },
+        {
+          "type": "s",
+          "unit": 1
+        },
+        {
+          "type": "m",
+          "unit": 2
+        },
+        {
+          "type": "l",
+          "unit": 3
+        },
+        {
+          "type": "xl",
+          "unit": 0
+        }
+      ],
+      "images": [
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10778682/2020/3/3/83119e2e-640d-41e5-8ef3-536d11f454ab1583231611978-Roadster-Women-Pink-Printed-Round-Neck-T-shirt-5571583231610-1.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10778682/2020/3/3/2db98e84-7ebd-4731-b5bd-f5cd02503c121583231611883-Roadster-Women-Pink-Printed-Round-Neck-T-shirt-5571583231610-3.jpg",
+        "https://assets.myntassets.com/h_1440,q_90,w_1080/v1/assets/images/10778682/2020/3/3/673f5bed-0231-4914-8124-1d79d74447f71583231611836-Roadster-Women-Pink-Printed-Round-Neck-T-shirt-5571583231610-4.jpg"
+      ],
+      "description": "<div class=\"meta-container\"><div class=\"meta-info\"><div class=\"meta-desc\">100% Original Products</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Pay on delivery might be available</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Easy 30 days returns and exchanges</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Try &amp; Buy might be available</div></div></div>",
+      "reviews": [
+        {
+          "id": "r1",
+          "author": "Pinky",
+          "date": "Mar 06, 2021",
+          "rating": 4,
+          "comment": "Can't say enough good things about this T-shirt"
+        },
+        {
+          "id": "r2",
+          "author": "Kuku Lali",
+          "date": "Sept 30, 2022",
+          "rating": 3,
+          "comment": "Thik che have :|"
+        }
+      ],
+      "relatedProduct": [
+        {
+          "id": "2",
+          "img": "https://static-cse.canva.com/blob/567610/53aa1e25637131.563487362e1b4.ef896c9d.png",
+          "title": "Black Tee",
+          "color": "Black",
+          "rate": "$50"
+        },
+        {
+          "id": "1",
+          "img": "https://m.media-amazon.com/images/I/61H7OGtlvpL._UL1500_.jpg",
+          "title": "Kakashi T-shirt",
+          "color": "White",
+          "rate": "$1000"
+        },
+        {
+          "id": "3",
+          "img": "https://thesagacity.s3.ap-south-1.amazonaws.com/media/thrasher_x_gojo_web_vptbqnb.webp",
+          "title": "Gojo Saturo T-shirt",
+          "color": "Black",
+          "rate": "$90"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Nike Air Jordan 7 Retro",
+      "slug": "air-jordan-7-retro",
+      "brandName": "Nike",
+      "price": 980,
+      "rating": 5,
+      "reviewCount": 1011,
+      "availableColors": ["black", "red", "indigo"],
+      "availableSize": [
+        {
+          "type": "8",
+          "unit": 5
+        },
+        {
+          "type": "9",
+          "unit": 4
+        },
+        {
+          "type": "10",
+          "unit": 1
+        },
+        {
+          "type": "11",
+          "unit": 2
+        },
+        {
+          "type": "12",
+          "unit": 3
+        }
+      ],
+      "images": [
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/bd3da02f-2ddc-4f0c-bb7b-f94c634cc0dd/air-jordan-7-retro-shoes-xbNFP8.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/69ab90fc-5298-4930-b884-5dd86bc4f25e/air-jordan-7-retro-shoes-xbNFP8.png",
+        "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/a0a1e949-6842-48dc-a319-371720d2790a/air-jordan-7-retro-shoes-xbNFP8.png"
+      ],
+      "description": "<div class=\"meta-container\"><div class=\"meta-info\"><div class=\"meta-desc\">100% Original Products</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Pay on delivery might be available</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Easy 30 days returns and exchanges</div></div><div class=\"meta-info\"><div class=\"meta-desc\">Try &amp; Buy might be available</div></div></div>",
+      "reviews": [
+        {
+          "id": "r1",
+          "author": "Pinky",
+          "date": "Mar 06, 2021",
+          "rating": 4,
+          "comment": "Can't say enough good things about this OP shoes"
+        },
+        {
+          "id": "r2",
+          "author": "Kuku Lali",
+          "date": "Sept 30, 2022",
+          "rating": 3,
+          "comment": "Ek Number 111111111111111, pan bo mongha b*!"
+        }
+      ],
+      "relatedProduct": [
+        {
+          "id": "1",
+          "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/985f92ce-a818-4708-8dcd-8341cfed732a/air-max-flyknit-racer-shoes-rVNTNl.png",
+          "title": "Nike Air Max Flyknit Racer",
+          "color": "Black",
+          "rate": "$500"
+        },
+        {
+          "id": "2",
+          "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/aa613683-3877-4d8e-a4d1-9aea1a6eb06d/air-vapormax-2021-fk-shoes-3kvLqp.png",
+          "title": "Nike Air VaporMax 2021 FK",
+          "color": "White",
+          "rate": "$900"
+        },
+        {
+          "id": "3",
+          "img": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5/4d6477e1-7646-431c-bb77-671a5a77ab91/offcourt-se-slides-0Xk9Zt.png",
+          "title": "Nike Offcourt SE",
+          "color": "Gray",
+          "rate": "$45"
         }
       ]
     }

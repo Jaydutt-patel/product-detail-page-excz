@@ -1,7 +1,8 @@
 import Link from "next/link";
+import router from "next/router";
 import { useState } from "react";
-import { HEADERLINKS } from "../constants";
 
+import { HEADERLINKS } from "../constants";
 import { Bag, Country, Hamburger, Kakashi, Logo, Search } from "../svg";
 
 const Header = () => {
@@ -31,7 +32,7 @@ const Header = () => {
           {renderHeaderLink()}
         </div>
       </div>
-      <div className=""><Logo color="#5649de" /></div>
+      <div onClick={() => router.push("/")} className="cursor-pointer"><Logo color="#5649de" /></div>
       <div className="flex items-center xl:w-1/5 justify-between lg:w-auto h-12">
         <div className="items-center text-gray-500 hidden lg:flex"><Country height="35" /> IND</div>
         <div className="hidden lg:flex"><Search height="30" /></div>
