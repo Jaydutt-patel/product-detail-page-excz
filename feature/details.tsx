@@ -1,5 +1,7 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import { useState } from 'react';
+import SEO from '../common/component/seo';
 
 // import img1 from "../public/nawaz.jpg";
 // import img2 from "../public/hritik.jpg";
@@ -12,7 +14,7 @@ const Details = (props: any) => {
     const [size, setSize] = useState("s");
 
     const sizeActive = "bg-indigo-600 text-white font-bold";
-    const { availableSize, title, price, rating, reviewCount, availableColors, images } = props.data;
+    const { availableSize, title, price, rating, reviewCount, availableColors, images, brandName, slug } = props.data;
 
     const renderSizes = () => {
         return availableSize.map((siz: { type: string, unit: number }, index: number) => (
@@ -41,8 +43,31 @@ const Details = (props: any) => {
                  ${selected == index && "outer-border"}`} onClick={() => setSelected(index)} />);
     }
 
+    const schema = {
+        '@context': 'http://schema.org',
+        '@type': 'Person',
+        name: title,
+        url: `http://localhost:3000/shop/tshirt/${slug}`,
+        jobTitle: 'Editor',
+        image: images[0],
+        worksFor: {
+            '@type': 'Organization',
+            name: 'Learning next js',
+        },
+        mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `http://localhost:3000/shop/tshirt/${slug}`,
+        },
+        sameAs: [`http://localhost:3000/shop/tshirt/${slug}`],
+    };
+
     return (
         <div>
+            <Head>
+                <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+            </Head>
+            <SEO title={title} keywords={brandName} description={title} url={`http://localhost:3000/shop/tshirt/${slug}`}
+                image={images[0]} />
             <div className="flex justify-center flex-wrap lg:justify-between">
                 {/* LEFT big IMAGE */}
                 <div className="rounded-2xl bg-slate-500 min-w-300 min-h-500 sm:min-w-400 lg:w-[49%]">
