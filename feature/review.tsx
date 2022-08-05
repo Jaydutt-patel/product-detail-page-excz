@@ -1,18 +1,18 @@
-import React from 'react'
-import { REVIEWS } from '../common/constants';
+import React from 'react';
+
+// import { REVIEWS } from '../common/constants';
 import { Star } from '../common/svg';
 
 interface ReviewData {
-    id: number,
-    name: string,
+    id: string,
     date: string,
-    star: number,
-    r_title: string,
-    r_para1: string,
-    r_para2: string
+    author: string,
+    rating: number,
+    comment: string,
 }
 
-const Review = () => {
+const Review = (props: any) => {
+    const { reviews } = props.data;
 
     const renderStar = (stars: number) => {
         let starReviews = [];
@@ -27,22 +27,22 @@ const Review = () => {
     };
 
     const renderReviewData = () => {
-        return REVIEWS.map((rev: ReviewData) => (
+        return reviews.map((rev: ReviewData) => (
             <div key={rev.id}>
                 <div className='flex justify-between pb-8 flex-wrap'>
                     <div className="w-1/2 lg:w-1/3">
                         <div className="name">
-                            <p className="text-black">{rev.name}</p>
+                            <p className="text-black">{rev.author}</p>
                             <p className="text-gray-400">{rev.date}</p>
                         </div>
                     </div>
                     <div className="rating w-1/2 lg:w-1/3 flex">
-                        {renderStar(rev.star)} <p className='pl-3 font-extralight text-sm'>{rev.star}</p>
+                        {renderStar(rev.rating)} <p className='pl-3 font-extralight text-sm'>{rev.rating}</p>
                     </div>
                     <div className="rew-desc lg:w-1/3 pt-3 lg:p-0">
-                        <p className="text-black">{rev.r_title}</p>
-                        <p className="text-gray-400 py-4">{rev.r_para1}</p>
-                        <p className="text-gray-400">{rev.r_para2}</p>
+                        <p className="text-black">{rev.comment}</p>
+                        {/* <p className="text-gray-400 py-4">{rev.r_para1}</p>
+                        <p className="text-gray-400">{rev.r_para2}</p> */}
                     </div>
                 </div>
                 <hr className="pb-8" />

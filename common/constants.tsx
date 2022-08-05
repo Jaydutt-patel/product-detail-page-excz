@@ -122,90 +122,104 @@ const FOOTERLINK = [
     },
 ];
 
-const REVIEWS = [
-    {
-        id: 1,
-        name: "ABC",
+const REVIEWS = {
+    reviews: [{
+        id: "1",
+        author: "ABC",
         date: "12-05-2022",
-        star: 5,
-        r_title: "Hello World",
-        r_para1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        r_para2: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        rating: 5,
+        comment: "Hello World",
     },
     {
-        id: 2,
-        name: "XYZ",
+        id: "2",
+        author: "XYZ",
         date: "11-09-2001",
-        star: 4,
-        r_title: "No comments",
-        r_para1: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        r_para2: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        rating: 4,
+        comment: "No comments",
     },
     {
-        id: 3,
-        name: "NANA",
+        id: "3",
+        author: "NANA",
         date: "09-11-2009",
-        star: 1,
-        r_title: "Loved It, seriously",
-        r_para1: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        r_para2: "",
+        rating: 1,
+        comment: "Loved It, seriously",
     },
+    ]
+};
+
+const SUGGESTED = {
+    relatedProduct: [
+        {
+            id: 1,
+            img: "https://m.media-amazon.com/images/I/61H7OGtlvpL._UL1500_.jpg",
+            title: "Kakashi T-shirt",
+            color: "White",
+            rate: "$1000",
+        },
+        {
+            id: 2,
+            img: "https://static-cse.canva.com/blob/567610/53aa1e25637131.563487362e1b4.ef896c9d.png",
+            title: "Black Tee",
+            color: "Black",
+            rate: "$50",
+        },
+        {
+            id: 3,
+            img: "https://thesagacity.s3.ap-south-1.amazonaws.com/media/thrasher_x_gojo_web_vptbqnb.webp",
+            title: "Gojo Saturo T-shirt",
+            color: "Black",
+            rate: "$90",
+        },
+        {
+            id: 4,
+            img: "https://outoforder.in/wp-content/uploads/2020/09/alcohol-is-a-solution-womens-t-shirt-image-400x533.jpg",
+            title: "Funny Quotes T-shirt",
+            color: "Black",
+            rate: "$30",
+        },
+    ]
+};
+
+const ALLSIZES = [
+    {
+        type: "xxs",
+        unit: 5
+    },
+    {
+        type: "xs",
+        unit: 4
+    },
+    {
+        type: "s",
+        unit: 1
+    },
+    {
+        type: "m",
+        unit: 2
+    },
+    {
+        type: "l",
+        unit: 3
+    },
+    {
+        type: "xl",
+        unit: 0
+    }
 ];
 
-const SUGGESTED = [
-    {
-        id: 1,
-        img: "https://m.media-amazon.com/images/I/61H7OGtlvpL._UL1500_.jpg",
-        title: "Kakashi T-shirt",
-        color: "White",
-        rate: "$1000",
-    },
-    {
-        id: 2,
-        img: "https://static-cse.canva.com/blob/567610/53aa1e25637131.563487362e1b4.ef896c9d.png",
-        title: "Black Tee",
-        color: "Black",
-        rate: "$50",
-    },
-    {
-        id: 3,
-        img: "https://thesagacity.s3.ap-south-1.amazonaws.com/media/thrasher_x_gojo_web_vptbqnb.webp",
-        title: "Gojo Saturo T-shirt",
-        color: "Black",
-        rate: "$90",
-    },
-    {
-        id: 4,
-        img: "https://outoforder.in/wp-content/uploads/2020/09/alcohol-is-a-solution-womens-t-shirt-image-400x533.jpg",
-        title: "Funny Quotes T-shirt",
-        color: "Black",
-        rate: "$30",
-    },
-];
+const DETAILSSTATIC = {
+    availableSize: ALLSIZES,
+    title: "Black Tee",
+    price: "35",
+    rating: 3.9,
+    reviewCount: 512,
+    availableColors: ["black", "gray", "lime"],
+    images: [
+        "/../public/nawaz.jpg",
+        "/../public/hritik.jpg",
+        "/../public/tommy.jpg"
+    ],
+};
 
-const ALLSIZES = [{
-    id: 1,
-    size: "XXS",
-},
-{
-    id: 2,
-    size: "XS",
-},
-{
-    id: 3,
-    size: "S",
-},
-{
-    id: 4,
-    size: "M",
-},
-{
-    id: 5,
-    size: "L",
-},
-{
-    id: 6,
-    size: "XL",
-},]
 
-export { HEADERLINKS, FOOTERLINK, REVIEWS, SUGGESTED, ALLSIZES };
+export { HEADERLINKS, FOOTERLINK, REVIEWS, SUGGESTED, ALLSIZES, DETAILSSTATIC };

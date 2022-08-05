@@ -1,21 +1,24 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
-import img1 from "../public/nawaz.jpg";
-import img2 from "../public/hritik.jpg";
-import img3 from "../public/tommy.jpg";
+// import img1 from "../public/nawaz.jpg";
+// import img2 from "../public/hritik.jpg";
+// import img3 from "../public/tommy.jpg";
+// import { ALLSIZES } from '../common/constants';
 import { Dollar, Globe, Star } from '../common/svg';
-import { ALLSIZES } from '../common/constants';
 
-const Details = () => {
-    const [selected, setSelected] = useState("0");
-    const [size, setSize] = useState("S");
+const Details = (props: any) => {
+    const [selected, setSelected] = useState(0);
+    const [size, setSize] = useState("s");
+
     const sizeActive = "bg-indigo-600 text-white font-bold";
+    const { availableSize, title, price, rating, reviewCount, availableColors, images } = props.data;
 
     const renderSizes = () => {
-        return ALLSIZES.map((siz: any) => (
-            <div key={siz.id} className={`flex items-center w-20 justify-center py-2 rounded-md border hover:bg-indigo-500 hover:text-white
-                ${size === siz.size ? sizeActive : "border-gray-300"}`} onClick={() => setSize(siz.size)}>{siz.size}</div>
+        return availableSize.map((siz: { type: string, unit: number }, index: number) => (
+            <div key={index} className={`flex items-center w-20 justify-center py-2 rounded-md border uppercase 
+                hover:bg-indigo-500 hover:text-white ${size === siz.type ? sizeActive : "border-gray-300"}`}
+                onClick={() => setSize(siz.type)}>{siz.type}</div>
         ));
     };
 
@@ -30,36 +33,41 @@ const Details = () => {
         }
         return starReviews;
     };
+
+    const renderColors = () => {
+        return availableColors.map((color: string, index: number) =>
+            <div key={index} className={`${color === "black" ? "bg-black border-black" :
+                `bg-${color}-600 border-${color}-600`}  rounded-full w-10 h-10 border-2 border-transparent cursor-pointer
+                 ${selected == index && "outer-border"}`} onClick={() => setSelected(index)} />);
+    }
+
     return (
         <div>
             <div className="flex justify-center flex-wrap lg:justify-between">
                 {/* LEFT big IMAGE */}
                 <div className="rounded-2xl bg-slate-500 min-w-300 min-h-500 sm:min-w-400 lg:w-[49%]">
                     <div className='h-full w-full relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
-                        <Image alt="img-1" src={img1} className="rounded-xl" layout="fill" objectFit="fill" />
+                        <Image alt="img-1" src={images[0]} className="rounded-xl" layout="fill" objectFit="fill" />
                     </div>
                 </div>
 
                 <div className="min-w-300 sm:min-w-400 lg:w-[49%]">
                     <div className="flex justify-between text-2xl pt-3 lg:pt-0">
-                        <p>Basic Tee</p> <p>$35</p>
+                        <p>{title}</p> <p>${price}</p>
                     </div>
                     {/* REVIEW */}
                     <div className="flex w-2/3 justify-between pt-4">
                         <div className='flex'>
-                            <p className='pr-2'>3.9</p>
-                            <div className='flex'>{renderStar(4)}</div>
+                            <p className='pr-2'>{rating}</p>
+                            <div className='flex'>{renderStar(rating)}</div>
                         </div>
-                        <p className='text-indigo-600 cursor-pointer'>See all 512 reviews</p>
+                        <p className='text-indigo-600 cursor-pointer'>See all {reviewCount} reviews</p>
                     </div>
                     {/* COLOR */}
-                    <div className="color py-8">
+                    <div className="color py-8 bg-blue-100">
                         <p>Color</p>
-                        <div className="flex justify-between w-24">
-                            <div className={`bg-black rounded-full w-10 h-10 border-black border-2 cursor-pointer
-                                ${selected == "0" && "outer-border"}`} onClick={() => setSelected("0")} />
-                            <div className={`bg-gray-600 rounded-full w-10 h-10 border-gray-600 border-2 cursor-pointer
-                                ${selected == "1" && "outer-border"}`} onClick={() => setSelected("1")} />
+                        <div className="flex justify-between w-1/3">
+                            {renderColors()}
                         </div>
                     </div>
                     {/* SIZE */}
@@ -114,10 +122,10 @@ const Details = () => {
             </div>
             <div className="flex flex-wrap justify-center pt-12 w-full lg:w-[49%] sm:justify-between">
                 <div className='h-[465px] w-[47%] min-w-300 sm:min-w-200 relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
-                    <Image alt="img-1" src={img2} className="rounded-xl" layout="fill" objectFit="cover" />
+                    <Image alt="img-1" src={images[1]} className="rounded-xl" layout="fill" objectFit="cover" />
                 </div>
                 <div className='h-[465px] w-[47%] min-w-300 sm:min-w-200 relative cursor-pointer mt-5 sm:mt-0 hover:scale-105 hover:transition-all duration-500 ease-in-out'>
-                    <Image alt="img-1" src={img3} className="rounded-xl" layout="fill" objectFit="fill" />
+                    <Image alt="img-1" src={images[2]} className="rounded-xl" layout="fill" objectFit="fill" />
                 </div>
             </div>
         </div >

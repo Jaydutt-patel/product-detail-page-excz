@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import { SUGGESTED } from '../common/constants';
+// import { SUGGESTED } from '../common/constants';
 
 interface SuggestionData {
     id: number,
@@ -11,9 +11,11 @@ interface SuggestionData {
     rate: string,
 }
 
-const Suggestion = () => {
+const Suggestion = (props: any) => {
+    const { relatedProduct } = props.data;
+
     const renderSuggestedData = () => {
-        return SUGGESTED.map((sug: SuggestionData) => (
+        return relatedProduct.map((sug: SuggestionData) => (
             <div className="pt-10 w-1/5 h-[500px] min-w-300 cursor-pointer hover:scale-105 hover:transition-all 
                     duration-500 ease-in-out" key={sug.id}>
                 <div className='h-5/6 w-full relative'>

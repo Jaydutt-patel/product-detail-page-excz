@@ -4,6 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: [
+      "assets.myntassets.com",
       "static-cse.canva.com",
       "m.media-amazon.com",
       "thesagacity.s3.ap-south-1.amazonaws.com",
