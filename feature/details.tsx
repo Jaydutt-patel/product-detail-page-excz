@@ -69,6 +69,18 @@ const Details = (props: any) => {
             <SEO title={title} keywords={brandName} description={title} url={`http://localhost:3000/shop/tshirt/${slug}`}
                 image={images[0]} />
             <div className="flex justify-center flex-wrap sm:justify-between">
+                <div className="flex justify-between text-xl w-full lg:text-2xl lg:pt-0 sm:hidden">
+                    <p>{title}</p> <p>${price}</p>
+                </div>
+                {/* REVIEW */}
+                <div className="flex flex-wrap justify-between pt-2 pb-4 w-full sm:hidden">
+                    <div className='flex flex-wrap min-w-200'>
+                        <p className='pr-2  '>{rating}</p>
+                        <div className='flex'>{renderStar(rating)}</div>
+                    </div>
+                    <p className='text-indigo-600 text-right cursor-pointer text-xs lg:text-base'>See all {reviewCount} reviews</p>
+                </div>
+
                 {/* LEFT big IMAGE */}
                 <div className="rounded-2xl bg-slate-500 min-w-300 sm:min-w-200 min-h-500 sm:max-h-750 md:max-h-full md:min-h-full sm:w-[49%]">
                     <div className='h-full w-full relative cursor-pointer hover:scale-105 hover:transition-all duration-500 ease-in-out'>
@@ -77,11 +89,11 @@ const Details = (props: any) => {
                 </div>
 
                 <div className="min-w-200 sm:w-[49%]">
-                    <div className="flex justify-between text-xl lg:text-2xl pt-3 lg:pt-0">
+                    <div className="hidden sm:flex justify-between text-xl lg:text-2xl pt-3 lg:pt-0">
                         <p>{title}</p> <p>${price}</p>
                     </div>
                     {/* REVIEW */}
-                    <div className="flex flex-wrap justify-between pt-4">
+                    <div className="hidden sm:flex flex-wrap justify-between pt-4">
                         <div className='flex flex-wrap min-w-200'>
                             <p className='pr-2  '>{rating}</p>
                             <div className='flex'>{renderStar(rating)}</div>
