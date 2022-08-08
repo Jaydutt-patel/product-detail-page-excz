@@ -19,7 +19,7 @@ const Details = (props: any) => {
     const renderSizes = () => {
         return availableSize.map((siz: { type: string, unit: number }, index: number) => (
             <div key={index} className={`flex items-center w-20 justify-center py-2 mt-1 md:mt-0 sm:mx-0 md:mx-1 xl:mx-0 
-                rounded-md border uppercase hover:bg-indigo-500 hover:text-white text-xs
+                rounded-md border uppercase hover:bg-indigo-500 hover:text-white text-xs lg:text-base
                 ${size === siz.type ? sizeActive : "border-gray-300"}`} onClick={() => setSize(siz.type)}>{siz.type}</div>
         ));
     };
