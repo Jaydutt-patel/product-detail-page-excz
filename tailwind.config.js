@@ -16,12 +16,20 @@ module.exports = {
     },
     minWidth: {
       0: "0px",
+      100: "100px",
       200: "200px",
       300: "300px",
       400: "400px",
     },
     minHeight: {
+      0: "0px",
       500: "500px",
+      full: "100%",
+    },
+    maxHeight: {
+      0: "0px",
+      750: "750px",
+      full: "100%",
     },
     extend: {
       strokeWidth: {

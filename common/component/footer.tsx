@@ -31,7 +31,7 @@ const Footer = () => {
   return (
     <footer className="pb-8">
       <div className="flex justify-between flex-wrap">
-        <div className="min-w-300 xsm:w-full xsm:min-w-0 sm:w-1/12"><Logo color="#5649de" /></div>
+        <div className="min-w-300 mb-14 sm:mb-0 xsm:w-full xsm:min-w-0 sm:w-1/12"><Logo color="#5649de" /></div>
         {footerLinks()}
         <div className="w-full lg:w-2/5">
           <p className="font-bold">Sign up for our newsletter</p>
